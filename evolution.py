@@ -189,46 +189,6 @@ class GenePool:
         # Set current instances
         self.current_instances = new_instances
 
-'''
-class InstanceSortingStrategy(ABC):
-    def sort(self, goal: Instance, instances: List[Instance]) -> List[Instance]:
-        ''''''
-
-
-class FittestInstanceSrotingStrategy(InstanceSortingStrategy):
-    def sort(self, goal: Instance, instances: List[Instance]) -> List[Instance]:
-        instances: List[Instance] = instances.copy()
-        sorted_instances: List[Instance] = sorted(
-                instances,
-                key=lambda instance: goal.calc_fitness(instance),
-                reverse=True
-            )
-        return sorted_instances
-
-
-
-@dataclass
-class Generation:
-    instances: List[Instance]
-
-    def get_best_instance(self, strategy: InstanceSortingStrategy) -> Union[Instance, None]:
-        sorted_instances: List[Instance] = strategy.sort(self.instances)
-        return sorted_instances[0] if len(sorted_instances) > 0 else None
-
-    def get_top_instances(self, strategy, top_percent: float) -> List[Instance]:
-        sorted_instances: List[Instance] = strategy.sort(self.instances)
-        top_amount: int = ceil(len(self.instances) * top_percent)
-        return sorted_instances[:top_amount]
-
-
-class Evolution:
-    ''' '''
-    def __init__(self):
-        pass
-
-    def run_cycle(self):
-        pass
-'''
 
 if __name__ == '__main__':
     goal_gene_string_to_list: List[chr] = [c for c in GOAL_GENE_STRING] 
