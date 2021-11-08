@@ -1,0 +1,1 @@
+# Evolúciós algoritmus és gyakorlati alkalmazása
